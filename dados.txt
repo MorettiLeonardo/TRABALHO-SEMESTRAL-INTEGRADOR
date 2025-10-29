@@ -1,0 +1,6 @@
+[CLIENTES]
+leo;leo@gmail.com
+[PRODUTOS]
+1;iphone;2000.0
+[PEDIDOS]
+leo@gmail.com|1:2,
