@@ -1,4 +1,4 @@
-package org.example.repositorys;
+package org.example.repository;
 
 
 import org.example.model.Pedido;

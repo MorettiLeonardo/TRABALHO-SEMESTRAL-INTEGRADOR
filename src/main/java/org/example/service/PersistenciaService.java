@@ -4,9 +4,9 @@ import org.example.model.Cliente;
 import org.example.model.ItemPedido;
 import org.example.model.Pedido;
 import org.example.model.Produto;
-import org.example.repositorys.ClienteRepository;
-import org.example.repositorys.PedidoRepository;
-import org.example.repositorys.ProdutoRepository;
+import org.example.repository.ClienteRepository;
+import org.example.repository.PedidoRepository;
+import org.example.repository.ProdutoRepository;
 
 import java.io.*;
 
@@ -23,22 +23,18 @@ public class PersistenciaService {
         this.pedidoRepo = pe;
     }
 
-    // Salvar dados
     public void salvarDados() {
         try (PrintWriter writer = new PrintWriter(new FileWriter(ARQUIVO))) {
-            // CLIENTES
             writer.println("[CLIENTES]");
             for (Cliente c : clienteRepo.listar()) {
                 writer.println(c.getNome() + ";" + c.getEmail());
             }
 
-            // PRODUTOS
             writer.println("[PRODUTOS]");
             for (Produto p : produtoRepo.listar()) {
                 writer.println(p.getId() + ";" + p.getNome() + ";" + p.getPreco());
             }
 
-            // PEDIDOS
             writer.println("[PEDIDOS]");
             for (Pedido ped : pedidoRepo.listar()) {
                 StringBuilder sb = new StringBuilder();
@@ -55,7 +51,6 @@ public class PersistenciaService {
         }
     }
 
-    // Carregar dados
     public void carregarDados() {
         File file = new File(ARQUIVO);
         if (!file.exists()) return;

@@ -7,9 +7,9 @@ import org.example.exception.ProdutoNaoEncontradoException;
 import org.example.model.Cliente;
 import org.example.model.Pedido;
 import org.example.model.Produto;
-import org.example.repositorys.ClienteRepository;
-import org.example.repositorys.PedidoRepository;
-import org.example.repositorys.ProdutoRepository;
+import org.example.repository.ClienteRepository;
+import org.example.repository.PedidoRepository;
+import org.example.repository.ProdutoRepository;
 
 import java.util.Scanner;
 

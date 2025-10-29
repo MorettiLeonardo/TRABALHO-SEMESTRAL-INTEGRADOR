@@ -1,9 +1,9 @@
 import org.example.exception.ClienteNaoEncontradoException;
 import org.example.exception.PedidoInvalidoException;
 import org.example.model.Cliente;
-import org.example.repositorys.ClienteRepository;
-import org.example.repositorys.PedidoRepository;
-import org.example.repositorys.ProdutoRepository;
+import org.example.repository.ClienteRepository;
+import org.example.repository.PedidoRepository;
+import org.example.repository.ProdutoRepository;
 import org.example.service.PedidoService;
 import org.junit.Test;
 
